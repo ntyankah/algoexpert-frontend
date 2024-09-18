@@ -55,7 +55,13 @@ const config: Config = {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+		  fontFamily: {
+			sans: ['Open Sans', 'sans-serif'],
+			jura: ['Jura', 'sans-serif'],
+			lato: ['Lato', 'sans-serif'],
+			ubuntu: ['Ubuntu', 'sans-serif'],
+		},
   	}
   },
   plugins: [require("tailwindcss-animate")],
