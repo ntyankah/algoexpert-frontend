@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './sections/Navbar'
 import Hero from './sections/Hero'
+import Progress from './sections/Progress'
 
 export default function QuestionsPage() {
   return (
@@ -11,6 +12,7 @@ export default function QuestionsPage() {
           <Hero />
         </div>
       </div>
+      <Progress />
     </div>
   )
 }
