@@ -2,8 +2,9 @@ import React from 'react'
 
 export default function Progress() {
   return (
-    <div>
-      Progress Section
-    </div>
+    <section>
+      <p>0 Quetions Completed out of 200</p>
+      <div></div>
+    </section>
   )
 }
