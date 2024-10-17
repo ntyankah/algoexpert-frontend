@@ -1,6 +1,11 @@
 'use client'
+import ColoredBall from '@/components/ColoredBall';
+import CheckBox from '@/components/CheckBox';
 import React, {useState} from 'react'
 import { twMerge } from 'tailwind-merge'
+import Image from 'next/image';
+import { closedStarSvg, openStarSvg } from '@/components/svgs/star';
+import { notStrikeThroughSvg, strikeThroughSvg } from '@/components/svgs/strikethrough';
 
 export default function Filter() {
     const [isExpanded, setIsExpanded] = useState(false);
@@ -26,11 +31,59 @@ export default function Filter() {
                     </Button>
                 </div>
             </div>
-            <div className={`flex justify-between mt-5 transition-all duration-500 overflow-hidden id-filters ${isExpanded? 'h-5': 'h-0'}`}>
-                <div className='bg-white'>Difficulty</div>
-                <div className='bg-white'>Favorite</div>
-                <div className='bg-white'>Strike Through</div>
-                <div className='bg-white'>Instructors</div>
+            <div className={`flex justify-center space-x-5 mt-16 transition-all duration-200 overflow-hidden id-filters ${isExpanded? 'h-10': 'h-0'}`}>
+                <div className='bg-white rounded overflow-clip flex'>
+                    <button className='flex justify-center items-center gap-2 hover:bg-[#ddd] px-2 py-0 transition duration-200'>
+                        <ColoredBall type='success'/>
+                        <CheckBox isChecked={true}/>
+                    </button>
+                    <button className='flex justify-center items-center gap-2 hover:bg-[#ddd] px-2 py-0 transition duration-200'>
+                        <ColoredBall type='warning'/>
+                        <CheckBox/>
+                    </button>
+                    <button className='flex justify-center items-center gap-2 hover:bg-[#ddd] px-2 py-0 transition duration-200'>
+                        <ColoredBall type='danger'/>
+                        <CheckBox/>
+                    </button>
+                    <button className='flex justify-center items-center gap-2 hover:bg-[#ddd] px-2 py-0 transition duration-200'>
+                        <ColoredBall type='white'/>
+                        <CheckBox/>
+                    </button>
+                </div>
+                <div className='bg-white rounded overflow-clip flex'>
+                    <button className='flex justify-center items-center gap-2 hover:bg-[#ddd] px-2 py-0 transition duration-200'>
+                        <CheckBox/>
+                        {openStarSvg}
+                    </button>
+                    <button className='flex justify-center items-center gap-2 hover:bg-[#ddd] px-2 py-0 transition duration-200'>
+                        <CheckBox/>
+                        {closedStarSvg}
+                    </button>
+                </div>
+                <div className='bg-white rounded overflow-clip flex'>
+                    <button className='flex justify-center items-center gap-2 hover:bg-[#ddd] p-2 transition duration-200'>
+                        <CheckBox/>
+                        {strikeThroughSvg}
+                    </button>
+                    <button className='flex justify-center items-center gap-2 hover:bg-[#ddd] p-2 transition duration-200'>
+                        <CheckBox/>
+                        {notStrikeThroughSvg}
+                    </button>
+                </div>
+                <div className='bg-white rounded overflow-clip flex'>
+                    <button className='flex justify-center items-center gap-2 hover:bg-[#ddd] p-2 transition duration-200'>
+                        <CheckBox/>
+                        <Image className='rounded-full' src="/images/clem.jpg" alt='clem' width={25} height={25}/>
+                    </button>
+                    <button className='flex justify-center items-center gap-2 hover:bg-[#ddd] p-2 transition duration-200'>
+                        <CheckBox/>
+                        <Image className='rounded-full' src="/images/tech-wit-tim.jpg" alt='clem' width={25} height={25}/>
+                    </button>
+                    <button className='flex justify-center items-center gap-2 hover:bg-[#ddd] p-2 transition duration-200'>
+                        <CheckBox/>
+                        <Image className='rounded-full' src="/images/conner.jpg" alt='clem' width={25} height={25}/>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
