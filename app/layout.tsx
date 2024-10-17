@@ -25,6 +25,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Add Google Fonts link here */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Jura&family=Lato&family=Open+Sans&family=Ubuntu&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
