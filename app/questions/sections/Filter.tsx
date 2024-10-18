@@ -10,7 +10,7 @@ import { notStrikeThroughSvg, strikeThroughSvg } from '@/components/svgs/striket
 export default function Filter() {
     const [isExpanded, setIsExpanded] = useState(false);
   return (
-    <div className='my-20'>
+    <div className='mt-20'>
         <div className="container mx-auto">
             <div className='flex justify-between items-center mb-5'>
                 <div>
@@ -31,7 +31,7 @@ export default function Filter() {
                     </Button>
                 </div>
             </div>
-            <div className={`flex justify-center space-x-5 mt-16 transition-all duration-200 overflow-hidden id-filters ${isExpanded? 'h-10': 'h-0'}`}>
+            <div className={`flex justify-center space-x-5 transition-all duration-200 overflow-hidden id-filters ${isExpanded? 'h-10 mt-16 mb-10': 'h-0'}`}>
                 <div className='bg-white rounded overflow-clip flex'>
                     <button className='flex justify-center items-center gap-2 hover:bg-[#ddd] px-2 py-0 transition duration-200'>
                         <ColoredBall type='success'/>
