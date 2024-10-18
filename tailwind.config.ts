@@ -63,7 +63,11 @@ const config: Config = {
 			ubuntu: ['Ubuntu', 'sans-serif'],
 		},
 		boxShadow: {
-			custom: '0 2px 5px -1px rgba(0, 0, 0, 0.5)'
+			custom: '0 2px 5px -1px rgba(0, 0, 0, 0.5)',
+			easy: '8px 0 0 0 #20ad2b',
+			medium: '8px 0 0 0 #257dbc',
+			hard: '8px 0 0 0 #c62121',
+			veryHard: '8px 0 0 0 #110f0f'
 		},
 		backgroundImage: {
 			success: 'linear-gradient(#04ff00, #369536)',

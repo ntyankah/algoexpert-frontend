@@ -1,8 +1,9 @@
 import React from 'react'
 import Navbar from './sections/Navbar'
 import Hero from './sections/Hero'
-import Progress from './sections/Progress'
+// import Progress from './sections/Progress'
 import Filter from './sections/Filter'
+import QuestionGroups from './sections/QuestionGroups'
 
 export default function QuestionsPage() {
   return (
@@ -15,6 +16,7 @@ export default function QuestionsPage() {
       </div>
       {/* <Progress /> */}
       <Filter />
+      <QuestionGroups />
     </div>
   )
 }
